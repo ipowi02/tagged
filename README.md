@@ -3,9 +3,9 @@ This implementation contains a global field of X macros called `TAGGED_TYPES`, w
 ```c
 X(<enum member name>, <type>, <union member name>, __VA_ARGS__) // "__VA_ARGS__" is necessary at the end
 ```
-What enum and union this updates are the ones used in `tagged_t`, so recompiling header is necessary after extending it.
+What enum and union this updates are the ones used in `tagged_t`, so recompiling the header is necessary after extending it with types.
 
-A `tagged_t` has two fields: a `.kind`, and a union of different types, defined in the X macro list, so iterating over the fields is possible by:
+A `tagged_t` has two fields: a `.kind`, and a union of the different types defined in the X macro list, so iterating over the fields is possible by:
 ```c
 tagged_t x = tag(1337);
 switch(x.kind) {
@@ -18,7 +18,7 @@ switch(x.kind) {
 
 }
 ```
-This implementation also has a linear array of strings in `tagged_type_name`, which store the kinds as strings, with their respective index.<br>
+This implementation also has a linear array of strings in `tagged_type_name`, which stores the kinds as strings, with their respective index.<br>
 So for instance: `strcmp(tagged_type_name[FLOAT], "FLOAT") == 0`.
 
 Have fun using it :p
