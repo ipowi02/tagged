@@ -1,5 +1,5 @@
 ### Usage: 
-This implementation contains a global field of X macros called `TAGGED_TYPES`, which you extend by adding fields like 
+This implementation contains a global field of X macros called `TAGGED_TYPES`, which are extensible like the following: 
 ```c
 X(<enum member name>, <type>, <union member name>, __VA_ARGS__) // "__VA_ARGS__" is necessary at the end
 ```
