@@ -19,6 +19,6 @@ switch(x.kind) {
 }
 ```
 This implementation also has a linear array of strings in `tagged_type_name`, which store the kinds as strings, with their respective index.<br>
-So for instance: `strcmp(tagged_type_name\[FLOAT\], "FLOAT") == 0`.
+So for instance: `strcmp(tagged_type_name[FLOAT], "FLOAT") == 0`.
 
 Have fun using it :p
